@@ -103,19 +103,18 @@ class RegisterResponseModel {
 
   factory RegisterResponseModel.fromMap(Map<String, dynamic> json) =>
       RegisterResponseModel(
-        email: json["email"],
-        password: json["password"],
-        name: json["name"],
-        avatar: json["avatar"],
-        role: json["role"],
-        id: json["id"],
-        creationAt: json["creationAt"] == null
-            ? null
-            : DateTime.parse(json["creationAt"]),
-        updatedAt: json["updatedAt"] == null
-            ? null
-            : DateTime.parse(json["updatedAt"]),
-      );
+          email: json["email"],
+          password: json["password"],
+          name: json["name"],
+          avatar: json["avatar"],
+          role: json["role"],
+          id: json["id"],
+          creationAt: json["creationAt"] == null
+              ? null
+              : DateTime.parse(json["creationAt"]),
+          updatedAt: json["updatedAt"] == null
+              ? null
+              : DateTime.parse(json["updatedAt"]));
 
   String toJson() => json.encode(toMap());
 

@@ -17,7 +17,7 @@ class RegisterRequestModel {
     required this.name,
     required this.email,
     required this.password,
-    this.avatar = '',
+    this.avatar = 'https://api.lorem.space/image/face?w=640&h=480',
   });
 
   Map<String, dynamic> toMap() {

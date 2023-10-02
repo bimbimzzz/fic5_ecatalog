@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  'Register Page',
+                  'Login Page',
                   style: TextStyle(fontSize: 25),
                 ),
                 SizedBox(
