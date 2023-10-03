@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_ecatalog/bloc/bloc/login_bloc.dart';
 import 'package:flutter_ecatalog/bloc/register/register_bloc.dart';
 import 'package:flutter_ecatalog/data/datasources/auth_datasources.dart';
 import 'package:flutter_ecatalog/presentation/register_page.dart';
@@ -13,8 +14,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => RegisterBloc(AuthDatasource()),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => RegisterBloc(AuthDatasource()),
+        ),
+        BlocProvider(
+          create: (context) => LoginBloc(AuthDatasource()),
+        ),
+      ],
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
